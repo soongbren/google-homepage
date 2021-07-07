@@ -1,0 +1,161 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/*Navbar Section, because id, use #, using grid*/
+#navbar {
+    display: grid;
+    grid-template-columns: 50px 50px 1fr 50px 70px 60px 50px;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "about store . gmail images apps profile";
+}
+
+a { /*for anchors*/
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 800;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    background: linear-gradient(to right, midnightblue, midnightblue 50%, rgb(60, 109, 255) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease
+}
+
+a:hover {
+    background-position: 0 100%;
+    text-decoration: underline;
+  }
+
+#about {
+    grid-area: about;
+    justify-self: center;
+    align-self: center;
+}
+
+#store {
+    grid-area: store;
+    justify-self: center; 
+    justify-self: center;
+    align-self: center;
+}
+
+#gmail {
+    grid-area: gmail;
+    justify-self: center;
+    align-self: center;
+}
+
+#images {
+    grid-area: images;
+    justify-self: center;
+    align-self: center;
+}
+
+#apps {
+    grid-area: apps;
+    justify-self: center;
+    align-self: center;
+}
+
+#profile {
+    grid-area: profile;
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+/*Main Section, using grid*/
+#main {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    grid-template-rows: 250px 70px 70px 250px;
+    grid-template-areas:
+    ". logo ." 
+    ". search ." 
+    ". flexbox . " 
+    ". language .";
+}
+
+#logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: end;
+}
+ 
+#search {
+    grid-area: search; 
+    justify-self: stretch;
+    height: 30px;
+    align-self: end;
+    margin-bottom: 10px; 
+    border-radius: 30px;
+    border-width: small;
+}
+#search:hover{
+    box-shadow: 1px 1px 5px gray;
+}
+
+#flexbox {
+    display:flexbox;
+    grid-area: flexbox;
+    justify-self: center;
+    align-self: top;
+}
+
+#buttonsearch {
+    border: none;
+    font-size: 15px;
+    height:50px;
+    width: 125px;
+}
+
+#buttonlucky {
+    border: none;
+    font-size: 15px;
+    height:50px;
+    width: 150px;
+}
+
+#buttonsearch:hover{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:5px 5px 5px 5px;
+    box-shadow: 1px 1px 5px gray;
+     
+}
+#buttonlucky:hover{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:5px 5px 5px 5px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+p {
+    grid-area: language;
+    justify-self: center;
+    align-self: top;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*Footer Section, using grid*/
+#footer {
+    display: grid;
+    position:relative;
+    align-self: end;
+    grid-template-columns: 100px 100px 1fr 70px 70px 70px;
+    grid-template-rows: 50px;
+    grid-template-areas:
+    "about store . gmail images apps lucky";
+}
+
